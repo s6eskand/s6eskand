@@ -4,8 +4,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Dosis', sans-serif;
+  background-color: #F9F9F9;
+  overflow: hidden;
 }
 
 a {
   cursor: pointer;
+  text-decoration: none;
+}
+
+.container {
+  padding-right: 97.5px;
+  padding-left: 97.5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 664px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 858px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1037.5px;
+  }
 }
