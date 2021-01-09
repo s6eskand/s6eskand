@@ -1,9 +1,13 @@
 import './App.css';
 
-// to authorize token
+// custom components
+import Base from './views/Base';
+
+
 function App() {
   return (
     <div>
+      <Base />
     </div>
   );
 }
