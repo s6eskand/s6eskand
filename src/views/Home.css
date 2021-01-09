@@ -1,0 +1,35 @@
+.home {
+    padding-top: 250px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-content-text {
+    width: 450px;
+}
+
+.home-img {
+    margin-top: 20px;
+    width: 450px;
+    height: 390px;
+    background: url('../media/images/header-resize.gif');
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;    
+}
+
+#my-name {
+    background-color: rgba(172, 230, 255, 0.26);
+    font-size: 72px;
+}
+
+#moving-text {
+    font-size: 36px;
+}
+
+#moving-text p {
+    margin: 0;
+}
