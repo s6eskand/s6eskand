@@ -1,0 +1,17 @@
+.about {
+    padding-top: 250px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-content-width {
+    width: 450px;
+}
+
+.about-img {
+
+}

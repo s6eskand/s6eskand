@@ -12,6 +12,7 @@ body {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: #000
 }
 
 .container {
@@ -19,6 +20,11 @@ a {
   padding-left: 97.5px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.title-text {
+  background-color: rgba(172, 230, 255, 0.26);
+  font-size: 72px;
 }
 
 @media (min-width: 768px) {

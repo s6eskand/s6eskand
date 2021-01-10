@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // media
 import home from '../../media/images/home.png';
@@ -12,11 +13,11 @@ function Navbar() {
         <nav className="nav">
             <div className="container">
                 <div className="nav-row">
-                    <img src={home} alt="computer icon"/>
+                    <Link to="/"><img src={home} alt="computer icon"/></Link>
                     <div className="filler" />
                     <div className="nav-items-list">
                         <ul className="nav-list">
-                            <li>about</li>
+                            <li><Link to="/about">about</Link></li>
                             <li>portfolio</li>
                             <li style={{paddingRight: 0}}><a href="https://samtechblog.com">blog</a></li>
                         </ul>

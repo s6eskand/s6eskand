@@ -1,16 +1,15 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 // custom components
-import Navbar from '../components/navigation/Navbar';
-import Home from './Home';
+import About from '../views/About';
 
 function Base() {
 
     return(
-        <div>
-            <Navbar />
-            <Home />
-        </div>
+        <>
+            <Route exact path="/about" component={About} />
+        </>
     )
 
 }
