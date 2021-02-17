@@ -5,6 +5,7 @@
 .home-content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -21,10 +22,32 @@
     border-radius: 10px;    
 }
 
+.home-img-mobile {
+    display: none;
+    width: 100%;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
 #moving-text {
     font-size: 36px;
 }
 
 #moving-text p {
     margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .home {
+        padding-top: 100px;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .home-img-mobile {
+        display: block;
+    }
 }

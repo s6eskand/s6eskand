@@ -5,13 +5,42 @@
 .about-content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.about-content-width {
+.about-content-text {
     width: 450px;
 }
 
 .about-img {
+    width: 426px;
+    height: 450px;
+    background: url("../media/images/rsz_sam_smile_sunglasses.jpg");
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
 
+.about-img-mobile {
+    display: none;
+    width: 100%;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .about {
+        padding-top: 100px;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    .about-img-mobile {
+        display: block;
+    }
 }

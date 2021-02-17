@@ -4,6 +4,9 @@ import Typical from 'react-typical';
 // css
 import './Home.css'
 
+// media
+import header from '../media/images/header-resize.gif';
+
 function Home() {
 
     const steps = [
@@ -23,7 +26,8 @@ function Home() {
 
     // populate constants as needed
     const incoming = '';
-    const current = 'Currently an Autonomous Vehicles SWE @ Ford Motor Company working on Full Stack development of simulation tools and systems for Autonomous Vehicles as well as fleet management, and Manager of Sensor Interfacing @ WATonomous working on converting a regular Chevy Bolt to a level 4 Autonomous Vehicle.';
+    const current = 'Currently an Autonomous Vehicles SWE @ Ford Motor Company, and Manager of Sensor Interfacing @ WATonomous';
+    const workingOn = 'Working on Full Stack development of simulation tools and systems for Autonomous Vehicles, and converting a regular Chevy Bolt to a level 4 Autonomous Vehicle'
     const prev = 'Previously a Software Developer at Exponet Canada, Full Stack Developer at Make.';
 
     return (
@@ -33,9 +37,10 @@ function Home() {
                     <p className="home-content-text">                    
                         <mark className="title-text">Sam Eskandar</mark> <br/> <br/>
                         <span id="moving-text"><Typical steps={steps} loop={Infinity} /></span>
-                        {current} <br/> <br/> {prev}
+                        {current} <br/> <br/> {workingOn} <br/> <br/> {prev}
                     </p>
                     <div className="home-img" />
+                    <img className="home-img-mobile" src={header} alt=""/>
                 </div>
             </div>
         </div>
