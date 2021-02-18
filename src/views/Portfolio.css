@@ -1,0 +1,12 @@
+.portfolio {
+    padding-top: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 760px) {
+    .portfolio {
+        padding-top: 150px;
+    }
+}

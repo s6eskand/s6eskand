@@ -18,7 +18,7 @@ function Navbar() {
                     <div className="nav-items-list">
                         <ul className="nav-list">
                             <li><Link to="/about">about</Link></li>
-                            <li>portfolio</li>
+                            <li><Link to="/portfolio">portfolio</Link></li>
                             <li style={{paddingRight: 0}}><a href="https://samtechblog.com">blog</a></li>
                         </ul>
                     </div>
