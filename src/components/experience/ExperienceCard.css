@@ -14,27 +14,8 @@
     border-top-right-radius: inherit;
 }
 
-.card-fab {
-    position: relative;
-    height: 50px;
-    width: 50px;
-    outline: none;
-    border: none;
-    top: -25px;
-    left: 30px;
-    border-radius: 50%;
-    transition: all 0.5s ease-in-out;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.card-fab:hover {
-    width: 280px;
-    border-radius: 5px;
-}
-
 .card-text {
-    margin: -20px 10px
+    margin: 5px 10px
 }
 
 .card-text p {
