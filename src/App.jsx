@@ -6,16 +6,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Base from './views/Base';
 import Navbar from './components/navigation/Navbar';
 import Home from './views/Home';
+import Terminal from "./views/Terminal";
 
 function App() {
   return (
     <div>
       <Router>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Base />
-          </Switch>
+          <Terminal />
+          {/*<Navbar />*/}
+          {/*<Switch>*/}
+          {/*  <Route exact path="/" component={Home} />*/}
+          {/*  <Base />*/}
+          {/*</Switch>*/}
       </Router>
     </div>
   );

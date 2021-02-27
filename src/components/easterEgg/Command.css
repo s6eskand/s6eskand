@@ -1,0 +1,17 @@
+
+.command {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 20px;
+}
+
+.command-input {
+    font-size: 18px;
+    padding-left: 10px;
+    background: inherit;
+    font-family: inherit;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    width: calc(100% - 200px);
+}
