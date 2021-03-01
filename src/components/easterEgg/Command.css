@@ -1,8 +1,11 @@
 
 .command {
+    padding-top: 20px;
+}
+
+.command-base {
     display: flex;
     flex-wrap: nowrap;
-    padding-top: 20px;
 }
 
 .command-input {
