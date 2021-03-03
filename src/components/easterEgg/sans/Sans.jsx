@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import './Sans.css';
 
-import Typist from "react-typist/src/Typist";
+import Typical from "react-typical";
 
 const randomSayings = [
     "heya.\n" +
@@ -31,21 +31,17 @@ function Sans() {
     const index = () => Math.floor(Math.random() * randomSayings.length);
 
     useEffect(() => {
-        const randomMessage = randomSayings[index()].split("\n");
-        setMessage(randomMessage)
+        const randomMessage = randomSayings[index()];
+        setMessage([randomMessage])
     }, [])
 
     return(
         <div className="sans">
-            <Typist>
-                {message.map(sentence => (
-                    <>
-                        <p>{sentence}</p>
-                        <Typist.Delay ms={500} />
-                        <br/>
-                    </>
-                ))}
-            </Typist>
+            <Typical
+                steps={message}
+                wrapper={"p"}
+                loop={1}
+            />
             <div>
                 <div className="head" />
                 <div className="torso" />
