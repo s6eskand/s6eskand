@@ -1,6 +1,8 @@
 
 .command {
     padding-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 50px;
 }
 
 .command-base {
@@ -16,5 +18,5 @@
     color: #FFFFFF;
     outline: none;
     border: none;
-    width: calc(100% - 200px);
+    width: calc(100% - 500px);
 }

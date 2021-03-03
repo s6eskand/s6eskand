@@ -6,10 +6,7 @@ import './Command.css';
 // custom components
 import User from "./User";
 import Help from "./commands/Help";
-
-const commands = {
-    "help": <Help />
-}
+import Sans from "./sans/Sans";
 
 function Command() {
     const [display, setDisplay] = useState([
@@ -18,16 +15,14 @@ function Command() {
             <input autoFocus className="command-input" type="text"/>
         </div>
     ])
-    const [path, setPath] = useState("~");
 
     const displayCommand = (value) => {
-        const splitString = value?.split(" ");
+        const splitString = value?.includes(" ") ? value.split(" ") : [value, ""];
         switch (splitString[0]) {
             case "help":
                 return <Help />
-            case "cd":
-                setPath("/test-path")
-                return <div />
+            case "sans":
+                return <Sans />
             default:
                 return(
                     <>
@@ -42,7 +37,7 @@ function Command() {
         const toAdd = <>
             {displayCommand(value)}
             <div className="command-base">
-                <User path={path} />
+                <User path="~" />
                 <input autoFocus className="command-input" type="text"/>
             </div>
         </>
