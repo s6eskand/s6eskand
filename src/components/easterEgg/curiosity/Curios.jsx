@@ -35,11 +35,11 @@ function Curios() {
         />
     ]);
     const [step, setStep] = useState(0);
-    const [open, setOpen] = useState(false);
 
     const onNext = () => {
         if (step === 3) {
-            setOpen(true)
+            localStorage.setItem("crash", true)
+            window.location.reload();
         } else {
             let newDisplay = [...display];
             newDisplay[step] = <p>{messages[step].join("").replaceAll("2000", " ")}</p>

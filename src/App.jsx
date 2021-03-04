@@ -8,6 +8,7 @@ import Navbar from './components/navigation/Navbar';
 import Home from './views/Home';
 import Terminal from "./views/Terminal";
 import CodeEditor from "./components/easterEgg/commands/CodeEditor";
+import Crash from "./views/Crash";
 
 function App() {
 
@@ -17,18 +18,24 @@ function App() {
         }
     }, [])
 
-    return (
-        <div>
-            <Router>
-                {/*<Terminal />*/}
-                <Navbar/>
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Base/>
-                </Switch>
-            </Router>
-        </div>
-    );
+    if (localStorage.getItem("crash")) {
+        return (
+            <Crash />
+        )
+    } else {
+        return (
+            <div>
+                <Router>
+                    {/*<Terminal />*/}
+                    <Navbar/>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Base/>
+                    </Switch>
+                </Router>
+            </div>
+        );
+    }
 }
 
 export default App;
