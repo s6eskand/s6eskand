@@ -7,17 +7,19 @@ import Base from './views/Base';
 import Navbar from './components/navigation/Navbar';
 import Home from './views/Home';
 import Terminal from "./views/Terminal";
+import CodeEditor from "./components/easterEgg/commands/CodeEditor";
 
 function App() {
   return (
     <div>
       <Router>
-          <Terminal />
-          {/*<Navbar />*/}
-          {/*<Switch>*/}
-          {/*  <Route exact path="/" component={Home} />*/}
-          {/*  <Base />*/}
-          {/*</Switch>*/}
+          {/*<Terminal />*/}
+          <Navbar />
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route component={CodeEditor} path="/solution-code" exact />
+              <Base />
+          </Switch>
       </Router>
     </div>
   );
