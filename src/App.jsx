@@ -16,6 +16,14 @@ function App() {
         if (!localStorage.getItem("visited")) {
             localStorage.setItem("visited", 0)
         }
+        if (!localStorage.getItem("game")) {
+            const gameData = {
+                wins: 0,
+                codeSolution: "",
+                level: 1
+            }
+            localStorage.setItem("game", JSON.stringify(gameData))
+        }
     }, [])
 
     if (localStorage.getItem("crash")) {

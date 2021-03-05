@@ -36,23 +36,23 @@ function Curios() {
     ]);
     const [step, setStep] = useState(0);
 
+    const crashSite = () => {
+        localStorage.setItem("crash", true);
+        window.location.reload();
+    }
+
     const onNext = () => {
-        if (step === 3) {
-            localStorage.setItem("crash", true)
-            window.location.reload();
-        } else {
-            let newDisplay = [...display];
-            newDisplay[step] = <p>{messages[step].join("").replaceAll("2000", " ")}</p>
-            newDisplay = [...newDisplay, <Typical
-                steps={messages[step + 1]}
-                wrapper={"p"}
-                loop={1}
-            />];
-            setDisplay([
-                ...newDisplay
-            ])
-            setStep(step + 1)
-        }
+        let newDisplay = [...display];
+        newDisplay[step] = <p>{messages[step].join("").replaceAll("2000", " ")}</p>
+        newDisplay = [...newDisplay, <Typical
+            steps={messages[step + 1]}
+            wrapper={"p"}
+            loop={1}
+        />];
+        setDisplay([
+            ...newDisplay
+        ])
+        setStep(step + 1)
     }
 
     return(
@@ -63,7 +63,14 @@ function Curios() {
                         <>{element}</>
                     ))
                 }
-                <button onClick={onNext} className="curios-btn">Continue...</button>
+                {
+                    step === 3 ?
+                        <div>
+                            <p>You better not...</p>
+                            <button onClick={crashSite} className="warning-btn">CRASH</button>
+                        </div> :
+                        <button onClick={onNext} className="curios-btn">Continue...</button>
+                }
             </div>
         </div>
     )

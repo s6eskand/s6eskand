@@ -25,7 +25,7 @@ const randomSayings = [
     "all i know is... seeing what comes next... i can't afford not to care anymore."
 ]
 
-function Sans() {
+function Sans({ saying }) {
     const [message, setMessage] = useState([])
 
     const index = () => Math.floor(Math.random() * randomSayings.length);
@@ -37,11 +37,11 @@ function Sans() {
 
     return(
         <div className="sans">
-            <Typical
+            {saying ? <Typical
                 steps={message}
                 wrapper={"p"}
                 loop={1}
-            />
+            />: null}
             <div>
                 <div className="head" />
                 <div className="torso" />

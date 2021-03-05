@@ -28,7 +28,7 @@ function Command() {
             case "cat":
                 return splitString[1] === "readme.txt" ? <Readme /> : <Readme />
             case "sans":
-                return <Sans />
+                return <Sans saying />
             case "code":
                 history.push("/solution-code")
                 break;
