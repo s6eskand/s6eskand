@@ -3,13 +3,19 @@ import React, { useEffect, useState } from 'react';
 import './SansDialog.css';
 
 import Typical from "react-typical";
+import { useHistory } from 'react-router-dom';
 
 // custom components
 import { useWindowDimensions } from "../../hooks/WindoDimensionsHook";
 import Sans from "./Sans";
 
+const routes = {
+    1: "/terminal",
+}
+
 function SansDialog({ level, open, handleClose }) {
     const { width, height } = useWindowDimensions();
+    const history = useHistory();
 
     const setSansMessage = () => {
         switch (level) {
@@ -20,6 +26,10 @@ function SansDialog({ level, open, handleClose }) {
             case 3:
                 return "You know a little too much about Sam don't you think...?";
         }
+    }
+
+    const handleChallenge = () => {
+        history.push(routes[level]);
     }
 
     return(
@@ -36,7 +46,7 @@ function SansDialog({ level, open, handleClose }) {
                         />
                         : null
                     }
-                    <button className="challenge-btn">Next challenge...</button>
+                    <button onClick={handleChallenge} className="challenge-btn">Next challenge...</button>
                 </div>
             </div>
         </div>

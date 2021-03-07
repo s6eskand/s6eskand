@@ -26,11 +26,20 @@ function Command() {
             case "help":
                 return <Help />
             case "cat":
-                return splitString[1] === "readme.txt" ? <Readme /> : <Readme />
+                if (splitString[1] === "readme.txt") {
+                    return <Readme />
+                } else if (splitString[1] === "solution.js") {
+                    return <Readme />
+                } else {
+                    return <>
+                        <p>The file {splitString[1]} does not exist</p>
+                        <Help />
+                    </>
+                }
             case "sans":
                 return <Sans saying />
             case "code":
-                history.push("/solution-code")
+                history.push("/solution")
                 break;
             default:
                 return(
