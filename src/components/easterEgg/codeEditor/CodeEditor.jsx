@@ -32,7 +32,7 @@ function CodeEditor() {
         const data = JSON.parse(localStorage.getItem("game"));
         data.codeSolution = solution;
         localStorage.setItem("game", JSON.stringify(data));
-        history.push("/")
+        history.push("/terminal")
     }
 
     useEffect(() => {

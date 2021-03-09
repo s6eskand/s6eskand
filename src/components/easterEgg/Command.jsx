@@ -11,6 +11,7 @@ import Help from "./commands/Help";
 import Sans from "./sans/Sans";
 import Readme from "./commands/Readme";
 import Directory from "./commands/Directory";
+import Verify from "./commands/Verify";
 
 function Command() {
     const [display, setDisplay] = useState([
@@ -44,6 +45,8 @@ function Command() {
             case "code":
                 history.push("/solution")
                 break;
+            case "verify":
+                return <Verify />
             default:
                 return(
                     <>

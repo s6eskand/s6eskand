@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+
+import { useHistory } from 'react-router-dom';
 
 // css
 import './Curios.css';
@@ -35,15 +37,17 @@ function Curios() {
         />
     ]);
     const [step, setStep] = useState(0);
+    const history = useHistory();
 
     const crashSite = () => {
         localStorage.setItem("crash", true);
+        history.push('/')
         window.location.reload();
     }
 
     const onNext = () => {
         let newDisplay = [...display];
-        newDisplay[step] = <p>{messages[step].join("").replaceAll("2000", " ")}</p>
+        newDisplay[step] = <p>{messages[step - 1].join("").replaceAll("2000", " ")}</p>
         newDisplay = [...newDisplay, <Typical
             steps={messages[step + 1]}
             wrapper={"p"}
