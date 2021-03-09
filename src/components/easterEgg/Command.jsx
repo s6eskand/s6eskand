@@ -10,6 +10,7 @@ import User from "./User";
 import Help from "./commands/Help";
 import Sans from "./sans/Sans";
 import Readme from "./commands/Readme";
+import Directory from "./commands/Directory";
 
 function Command() {
     const [display, setDisplay] = useState([
@@ -25,6 +26,8 @@ function Command() {
         switch (splitString[0]) {
             case "help":
                 return <Help />
+            case "ls":
+                return <Directory />
             case "cat":
                 if (splitString[1] === "readme.txt") {
                     return <Readme />

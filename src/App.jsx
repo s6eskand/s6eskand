@@ -20,7 +20,7 @@ function App() {
         if (!localStorage.getItem("game")) {
             const gameData = {
                 wins: 0,
-                codeSolution: "",
+                codeSolution: "// your solution here",
                 level: 1
             }
             localStorage.setItem("game", JSON.stringify(gameData))

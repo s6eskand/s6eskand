@@ -14,7 +14,7 @@ const routes = {
 }
 
 function SansDialog({ level, open, handleClose }) {
-    const { width, height } = useWindowDimensions();
+    const { windowWidth, windowHeight } = useWindowDimensions();
     const history = useHistory();
 
     const setSansMessage = () => {
@@ -34,7 +34,7 @@ function SansDialog({ level, open, handleClose }) {
 
     return(
         <div className="dialog" hidden={!open}>
-            <div className="dialog-content" style={width > 560 ? {transform: `translateY(${height / 2 - 70}px)`} : null}>
+            <div className="dialog-content" style={windowWidth > 560 ? {transform: `translateY(${windowHeight / 2 - 70}px)`} : null}>
                 <button onClick={handleClose} className="close-dialog">exit</button>
                 <Sans saying={false} />
                 <div className="dialog-actions">
