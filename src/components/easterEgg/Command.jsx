@@ -12,6 +12,7 @@ import Sans from "./sans/Sans";
 import Readme from "./commands/Readme";
 import Directory from "./commands/Directory";
 import Verify from "./commands/Verify";
+import PrintSolution from "./commands/PrintSolution";
 
 function Command() {
     const [display, setDisplay] = useState([
@@ -23,6 +24,7 @@ function Command() {
     const history = useHistory();
 
     const displayCommand = (value) => {
+        const { level } = JSON.parse(localStorage.getItem("game"));
         const splitString = value?.includes(" ") ? value.split(" ") : [value, ""];
         switch (splitString[0]) {
             case "help":
@@ -33,7 +35,7 @@ function Command() {
                 if (splitString[1] === "readme.txt") {
                     return <Readme />
                 } else if (splitString[1] === "solution.js") {
-                    return <Readme />
+                    return <PrintSolution />
                 } else {
                     return <>
                         <p>The file {splitString[1]} does not exist</p>
@@ -43,9 +45,15 @@ function Command() {
             case "sans":
                 return <Sans saying />
             case "code":
+                if (level !== 1) {
+                    return <p>You already completed the coding challenge!</p>
+                }
                 history.push("/solution")
                 break;
             case "verify":
+                if (level !== 1) {
+                    return <p>You already completed the coding challenge!</p>
+                }
                 return <Verify />
             default:
                 return(
