@@ -5,7 +5,7 @@ export const QUESTIONS = {
     },
     2: {
         question: "What is Sam's favourite programming language?",
-        answer: 3,
+        answer: 2,
     },
     3: {
         question: "What is the first programming language Sam learned?",

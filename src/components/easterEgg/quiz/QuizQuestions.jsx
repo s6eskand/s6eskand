@@ -7,14 +7,18 @@ import {
 
 import './QuizQuestions.css';
 
-const Question = ({ index, option, question, setQuestion, setCorrect }) => {
+const Question = ({ index, option, question, setQuestion, setCorrect, setPage }) => {
 
     const handleClick = () => {
-        const { answer } = QUESTIONS[question];
+        if (question === 10) {
+            setPage(prevPage => prevPage + 1);
+        } else {
+            setQuestion(prevQuestion => prevQuestion + 1)
+        }
+        const {answer} = QUESTIONS[question];
         if (answer === index) {
             setCorrect(prevCorrect => prevCorrect + 1);
         }
-        setQuestion(prevQuestion => prevQuestion + 1)
     }
 
     return (
@@ -25,9 +29,8 @@ const Question = ({ index, option, question, setQuestion, setCorrect }) => {
     )
 }
 
-function QuizQuestions({  }) {
+function QuizQuestions({ correct, setCorrect, setPage }) {
     const [question, setQuestion] = useState(1);
-    const [correct, setCorrect] = useState(0);
 
     return (
         <div className="questions-content">
@@ -50,6 +53,7 @@ function QuizQuestions({  }) {
                     question={question}
                     setQuestion={setQuestion}
                     setCorrect={setCorrect}
+                    setPage={setPage}
                 />
             ))}
         </div>

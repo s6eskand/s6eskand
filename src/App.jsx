@@ -11,6 +11,7 @@ import Terminal from "./views/Terminal";
 import Solution from "./components/easterEgg/codeEditor/Solution";
 import Crash from "./views/Crash";
 import Quiz from "./components/easterEgg/quiz/Quiz";
+import DontTouch from "./components/easterEgg/dontTouch/DontTouch";
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
                         <Route exact path="/terminal" component={Terminal} />
                         <Route exact path="/solution" component={Solution} />
                         <Route exact path="/quiz" component={Quiz} />
+                        <Route exact path="/dont-touch" component={DontTouch} />
                     </Switch>
                 </Router>
             </div>
