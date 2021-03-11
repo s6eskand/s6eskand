@@ -11,6 +11,7 @@ import Sans from "./Sans";
 
 const routes = {
     1: "/terminal",
+    2: "/quiz"
 }
 
 function SansDialog({ level, open, handleClose }) {

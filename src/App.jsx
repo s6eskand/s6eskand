@@ -10,6 +10,7 @@ import Home from './views/Home';
 import Terminal from "./views/Terminal";
 import Solution from "./components/easterEgg/codeEditor/Solution";
 import Crash from "./views/Crash";
+import Quiz from "./components/easterEgg/quiz/Quiz";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
                         <Route exact path="/" component={Crash} />
                         <Route exact path="/terminal" component={Terminal} />
                         <Route exact path="/solution" component={Solution} />
+                        <Route exact path="/quiz" component={Quiz} />
                     </Switch>
                 </Router>
             </div>

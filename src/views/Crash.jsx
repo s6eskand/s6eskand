@@ -30,7 +30,7 @@ function Crash() {
                 <h3>&#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749;</h3>
                 <a onClick={() => setOpen(true)}>Help!</a>
             </div>
-            <SansDialog level={level}  handleClose={() => setOpen(false)} open={open} />
+            <SansDialog level={level} handleClose={() => setOpen(false)} open={open} />
         </>
     )
 }

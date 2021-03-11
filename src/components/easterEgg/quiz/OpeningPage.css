@@ -1,0 +1,16 @@
+
+.opening-page-button {
+    border: 2px solid #56a5eb;
+    border-radius: 30px;
+    outline: none;
+    height: 50px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.opening-page-button:hover {
+    box-shadow: 4px 4px 10px #56a5eb;
+    transform: translateY(-5px);
+}
