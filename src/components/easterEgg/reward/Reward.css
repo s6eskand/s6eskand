@@ -1,0 +1,8 @@
+
+.reward {
+    background-color: #030303;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

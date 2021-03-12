@@ -9,50 +9,32 @@ import { useHistory } from 'react-router-dom';
 import { useWindowDimensions } from "../../hooks/WindoDimensionsHook";
 import Sans from "./Sans";
 
-const routes = {
-    1: "/terminal",
-    2: "/quiz",
-    3: "/dont-touch"
-}
-
-function SansDialog({ level, open, handleClose }) {
+function DefeatedSans({ open, handleClose }) {
     const { windowWidth, windowHeight } = useWindowDimensions();
     const history = useHistory();
 
-    const setSansMessage = () => {
-        switch (level) {
-            case 1:
-                return "You should have listened to the website...";
-            case 2:
-                return "Okay...you know how to code...want a cookie...?";
-            case 3:
-                return "You know a little too much about Sam don't you think...?";
-        }
-    }
-
-    const handleChallenge = () => {
-        history.push(routes[level]);
+    const collectReward = () => {
+        history.push("/reward");
     }
 
     return(
         <div className="dialog" hidden={!open}>
             <div className="dialog-content" style={windowWidth > 560 ? {transform: `translateY(${windowHeight / 2 - 70}px)`} : null}>
-                <button onClick={handleClose} className="close-dialog">exit</button>
                 <Sans saying={false} />
                 <div className="dialog-actions">
                     {open ?
                         <Typical
-                            steps={[setSansMessage()]}
+                            steps={["You made your way to the forbidden button and foiled my plan...How dare you...Collect your CuriousCat token and leave..."]}
                             wrapper="p"
                             loop={1}
                         />
                         : null
                     }
-                    <button onClick={handleChallenge} className="challenge-btn">Next challenge...</button>
+                    <button onClick={collectReward} className="challenge-btn">Collect Reward...</button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default SansDialog;
+export default DefeatedSans;
