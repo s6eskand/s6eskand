@@ -42,6 +42,11 @@ function Command() {
                         <Help />
                     </>
                 }
+            case "quit":
+                localStorage.removeItem("crash");
+                history.push("/")
+                window.location.reload();
+                break;
             case "sans":
                 return <Sans saying />
             case "code":

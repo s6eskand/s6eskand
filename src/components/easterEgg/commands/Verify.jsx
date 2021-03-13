@@ -35,7 +35,7 @@ function Verify() {
         if (codeSolution.includes("window") || codeSolution.includes("localStorage")) {
             return new Function("nums", "target", "console.log(\"nice try\");")
         }
-        return new Function("nums", "target", codeSolution);
+        return new Function("nums", "target", codeSolution.toString());
     }
 
     const verify = (actual, expected) => {
@@ -58,14 +58,19 @@ function Verify() {
     }
 
     const runTestCases = () => {
-        const solutionFn = createFunction();
         let fails = 0;
-        testCases.forEach((test) => {
-            const actual = solutionFn(test.nums, test.target);
-            const pass = verify(actual, test.expected);
-            if (!pass) fails++;
-        })
-        setResult(fails);
+        try {
+            const solutionFn = createFunction();
+            testCases.forEach((test) => {
+                const actual = solutionFn(test.nums, test.target);
+                const pass = verify(actual, test.expected);
+                if (!pass) fails++;
+            })
+            setResult(fails);
+        } catch (e) {
+            setResult(4);
+            fails = 4;
+        }
         if (fails === 0) {
             let data = JSON.parse(localStorage.getItem("game"));
             data.level = 2;

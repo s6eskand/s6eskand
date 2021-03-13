@@ -28,6 +28,12 @@ function EndScreen({ correct, handleReset }) {
         history.push("/")
     }
 
+    const handleQuit = () => {
+        localStorage.removeItem("crash");
+        history.push("/");
+        window.location.reload();
+    }
+
     return (
         <div>
             <p className="endscreen-text">
@@ -36,7 +42,7 @@ function EndScreen({ correct, handleReset }) {
             </p>
             {correct !== 10 ?
                 <div className="endscreen-buttons">
-                    <button className="endscreen-button">Quit Game</button>
+                    <button className="endscreen-button" onClick={handleQuit}>Quit Game</button>
                     <button className="endscreen-button" onClick={handleReset}>Try Again</button>
                 </div>
                 :
