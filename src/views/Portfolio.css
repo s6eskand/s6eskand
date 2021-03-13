@@ -5,6 +5,14 @@
     flex-direction: row;
 }
 
+.portfolio-work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+
 @media screen and (max-width: 760px) {
     .portfolio {
         padding-top: 150px;

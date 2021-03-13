@@ -18,13 +18,16 @@ function Portfolio() {
         <div className="portfolio">
             <div className="container">
                 <mark className="title-text">Work Experience</mark> <br/> <br/>
-                {WORK.map(work => (
-                    <ExperienceCard
-                        title={work.title}
-                        description={work.description}
-                        image={work.image}
-                    />
-                ))}
+                <div className="portfolio-work">
+                    {WORK.map(work => (
+                        <ExperienceCard
+                            title={work.title}
+                            company={work.company}
+                            description={work.description}
+                            image={work.image}
+                        />
+                    ))}
+                </div>
                 <mark className="title-text">Personal Projects</mark> <br/> <br/>
             </div>
         </div>
