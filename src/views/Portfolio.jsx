@@ -22,9 +22,10 @@ function Portfolio() {
                     {WORK.map(work => (
                         <ExperienceCard
                             title={work.title}
-                            company={work.company}
+                            subtitle={work.subtitle}
                             description={work.description}
                             image={work.image}
+                            link={work.link}
                         />
                     ))}
                 </div>
