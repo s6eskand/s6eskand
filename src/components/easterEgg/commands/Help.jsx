@@ -11,6 +11,7 @@ function Help() {
             <span style={{color: "yellow"}}>verify</span> verify your answer to move forward <br/><br/>
             <span style={{color: "yellow"}}>quit</span> quit game and return to website <br/><br/>
             <span style={{color: "yellow"}}>sans</span> view a drawing of sans with a random saying <br/><br/>
+            <span style={{color: "yellow"}}>skip</span> skips current level, but you lose your reward <br/><br/>
         </p>
     )
 }

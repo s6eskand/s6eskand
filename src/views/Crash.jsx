@@ -7,8 +7,17 @@ function Crash() {
     const [level, setLevel] = useState(1);
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem("game"));
-        setLevel(data.level);
+        try {
+            const data = JSON.parse(localStorage.getItem("game"));
+            setLevel(data.level);
+        } catch (e) {
+            const data = {
+                wins: 0,
+                codeSolution: "// add your solution here",
+                level: 1
+            }
+            localStorage.setItem("game", JSON.stringify(data))
+        }
     }, [])
 
     const levelMessage = () => {

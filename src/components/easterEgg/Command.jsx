@@ -25,7 +25,18 @@ function Command() {
     const history = useHistory();
 
     const displayCommand = (value) => {
-        const { level } = JSON.parse(localStorage.getItem("game"));
+        let currLevel = 1;
+        try {
+            const { level } = JSON.parse(localStorage.getItem("game"));
+            currLevel = level
+        } catch (e) {
+            const data = {
+                wins: 0,
+                codeSolution: "// add your solution here",
+                level: 1
+            }
+            localStorage.setItem("game", JSON.stringify(data))
+        }
         const splitString = value?.includes(" ") ? value.split(" ") : [value, ""];
         switch (splitString[0]) {
             case "help":
@@ -45,22 +56,32 @@ function Command() {
                 }
             case "quit":
                 localStorage.removeItem("crash");
+                if (localStorage.getItem("skipped")) {
+                    localStorage.removeItem("skipped")
+                }
                 history.push("/")
                 window.location.reload();
                 break;
             case "sans":
                 return <Sans saying />
             case "code":
-                if (level !== 1) {
+                if (currLevel !== 1) {
                     return <p>You already completed the coding challenge!</p>
                 }
                 history.push("/solution")
                 break;
             case "verify":
-                if (level !== 1) {
+                if (currLevel !== 1) {
                     return <p>You already completed the coding challenge!</p>
                 }
                 return <Verify />
+            case "skip":
+                localStorage.setItem("skipped", true);
+                let data = JSON.parse(localStorage.getItem("game"));
+                data.level = 2;
+                localStorage.setItem("game", JSON.stringify(data));
+                history.push("/");
+                break;
             default:
                 return(
                     <>
@@ -93,6 +114,16 @@ function Command() {
     }, [render])
 
     useEffect(() => {
+
+        if (!localStorage.getItem("game")) {
+            const data = {
+                wins: 0,
+                codeSolution: "// add your solution here",
+                level: 1
+            }
+            localStorage.setItem("game", JSON.stringify(data))
+        }
+
         window.addEventListener('keydown', handleUserKeyPress);
 
         return () => {

@@ -22,14 +22,26 @@ function EndScreen({ correct, handleReset }) {
     }
 
     const handleNext = () => {
-        const data = JSON.parse(localStorage.getItem("game"));
-        data.level = 3;
-        localStorage.setItem("game", JSON.stringify(data));
+        try {
+            const data = JSON.parse(localStorage.getItem("game"));
+            data.level = 3;
+            localStorage.setItem("game", JSON.stringify(data));
+        } catch (e) {
+            const data = {
+                wins: 0,
+                codeSolution: "// add your solution here",
+                level: 1
+            }
+            localStorage.setItem("game", JSON.stringify(data))
+        }
         history.push("/")
     }
 
     const handleQuit = () => {
         localStorage.removeItem("crash");
+        if (localStorage.getItem("skipped")) {
+            localStorage.removeItem("skipped")
+        }
         history.push("/");
         window.location.reload();
     }

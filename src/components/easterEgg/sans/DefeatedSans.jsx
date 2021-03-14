@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { useWindowDimensions } from "../../hooks/WindoDimensionsHook";
 import Sans from "./Sans";
 
-function DefeatedSans({ open, handleClose }) {
+function DefeatedSans({ open }) {
     const { windowWidth, windowHeight } = useWindowDimensions();
     const history = useHistory();
 

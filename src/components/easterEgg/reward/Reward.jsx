@@ -13,7 +13,11 @@ function Reward() {
         let data = JSON.parse(localStorage.getItem("game"));
         data.level = 1;
         data.codeSolution = "// add your solution here";
-        data.wins += 1;
+        if (!localStorage.getItem("skipped")) {
+            data.wins += 1;
+        } else {
+            localStorage.removeItem("skipped");
+        }
         localStorage.setItem("game", JSON.stringify(data));
         localStorage.removeItem("crash");
         history.push("/");
@@ -21,8 +25,18 @@ function Reward() {
     }
 
     useEffect(() => {
-        const { level } = JSON.parse(localStorage.getItem("game"));
-        if (level !== 3) {
+        try {
+            const {level} = JSON.parse(localStorage.getItem("game"));
+            if (level !== 3) {
+                history.push("/")
+            }
+        } catch (e) {
+            const data = {
+                wins: 0,
+                codeSolution: "// add your solution here",
+                level: 1
+            }
+            localStorage.setItem("game", JSON.stringify(data))
             history.push("/")
         }
     }, [])
