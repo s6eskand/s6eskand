@@ -21,6 +21,8 @@ function Readme() {
             Example 3: <br/>
             Input: nums = [3,3], target = 6 <br/>
             Output: [0,1] <br/><br/>
+            Type <span style={{ color: "yellow" }}>code</span> to open up the editor,
+            and <span style={{ color: "yellow" }}>help</span> to view commands available to you. <br/><br/>
             GOOD LUCK!!!!
         </p>
     )

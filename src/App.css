@@ -40,3 +40,9 @@ a {
     width: 1037.5px;
   }
 }
+
+@media (max-width: 500px) {
+  .title-text {
+    font-size: 64px;
+  }
+}

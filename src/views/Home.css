@@ -26,6 +26,7 @@
 .home-img-mobile {
     display: none;
     width: 100%;
+    height: 225px;
     filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
     margin-bottom: 50px;

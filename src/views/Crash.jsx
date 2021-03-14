@@ -28,7 +28,7 @@ function Crash() {
                 <h1>418 Error! This webpage is now a teapot</h1>
                 <h2>{levelMessage()}</h2>
                 <h3>&#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749; &#9749;</h3>
-                <a onClick={() => setOpen(true)}>Help!</a>
+                <a onClick={() => setOpen(true)} style={{ fontSize: 36 }}>Click for Help!</a>
             </div>
             <SansDialog level={level} handleClose={() => setOpen(false)} open={open} />
         </>

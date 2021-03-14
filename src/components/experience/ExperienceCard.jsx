@@ -23,7 +23,7 @@ function ExperienceCard({ image, title, description, github, website, subtitle, 
                 <p className="card-text-title">{title}</p>
                 {description}
             </div>
-            <a href={link}><img className="card-image" src={image} alt={title}/></a>
+            <a href={link} className="card-image-div"><img className="card-image" src={image} alt={title}/></a>
         </div>
     )
 

@@ -18,3 +18,9 @@
         padding-top: 150px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .portfolio-work {
+        max-width: 300px;
+    }
+}

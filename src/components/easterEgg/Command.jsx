@@ -16,6 +16,7 @@ import PrintSolution from "./commands/PrintSolution";
 
 function Command() {
     const [display, setDisplay] = useState([
+        <Readme />,
         <div className="command-base">
             <User path="~" />
             <input autoFocus className="command-input" type="text"/>

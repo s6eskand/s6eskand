@@ -31,3 +31,40 @@
     filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
 }
+
+@media (max-width: 1200px) {
+    .card-image {
+        width: 250px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card-image {
+        width: 426px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .card {
+        justify-content: center;
+        max-width: 300px;
+    }
+
+    .card-text {
+        min-width: 300px;
+        max-width: 300px;
+        width: 300px;
+        margin-right: 0;
+        padding-right: 25px;
+    }
+
+    .card-image {
+        width: 200px;
+    }
+
+    .card-image-div {
+        width: 200px;
+        padding-right: 25px;
+    }
+}
