@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // custom components
 import Base from './views/Base';
 import Navbar from './components/navigation/Navbar';
-import Home from './views/Home';
 import Terminal from "./views/Terminal";
 import Solution from "./components/easterEgg/codeEditor/Solution";
 import Crash from "./views/Crash";
@@ -51,7 +50,6 @@ function App() {
                 <Router>
                     <Navbar/>
                     <Switch>
-                        <Route exact path="/" component={Home}/>
                         <Base/>
                     </Switch>
                 </Router>

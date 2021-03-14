@@ -12,9 +12,12 @@ import {
     PROJECTS
 } from "../components/experience/experience";
 
+import Footer from "../components/footer/Footer";
+
 function Portfolio() {
 
     return(
+        <>
         <div className="portfolio">
             <div className="container">
                 <mark className="title-text">Work Experience</mark> <br/> <br/>
@@ -46,6 +49,8 @@ function Portfolio() {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     )
 
 }

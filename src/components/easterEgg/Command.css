@@ -20,3 +20,9 @@
     border: none;
     width: calc(100% - 500px);
 }
+
+@media screen and (max-width: 760px) {
+    .command-input {
+        width: calc(100% - 200px);
+    }
+}

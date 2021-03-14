@@ -25,14 +25,45 @@
     padding: 40px;
 }
 
+.nav-list-mobile {
+    position: absolute;
+    background-color: #f1f1f1;
+    display: none;
+    list-style-type: none;
+    top: 65px;
+    width: 200px;
+    height: 100vh;
+    transition: all 0.5s ease;
+}
+
+.nav-list-mobile li {
+    margin-top: 50px;
+    padding: 10px 0;
+}
+
 .filler {
     width: 80%;
+}
+
+.menu-icon {
+    display: none;
 }
 
 @media screen and (max-width: 786px) {
 
     .nav-list {
         display: none;
+    }
+
+    .nav-list-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
     }
 
 }

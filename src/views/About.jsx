@@ -6,9 +6,12 @@ import './About.css';
 // media
 import profile from '../media/images/rsz_sam_smile_sunglasses.jpg';
 
+import Footer from "../components/footer/Footer";
+
 function About() {
 
     return(
+        <>
         <div className="about">
             <div className="container">
                 <div className="about-content">
@@ -31,6 +34,8 @@ function About() {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     )
 
 }

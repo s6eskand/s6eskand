@@ -6,6 +6,7 @@ import './Home.css'
 
 // media
 import header from '../media/images/header-resize.gif';
+import Footer from "../components/footer/Footer";
 
 function Home() {
 
@@ -31,6 +32,7 @@ function Home() {
     const prev = 'Previously a Software Developer at Exponet Canada, Full Stack Developer at Make.';
 
     return (
+        <>
         <div className="home">
             <div className="container">
                 <div className="home-content">
@@ -44,6 +46,8 @@ function Home() {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     )
 
 }
