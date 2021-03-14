@@ -8,6 +8,7 @@
 
 .card-text {
     max-width: 540px;
+    min-width: 540px;
     margin-right: 60px;
 }
 

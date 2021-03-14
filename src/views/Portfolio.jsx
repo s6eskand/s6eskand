@@ -30,6 +30,20 @@ function Portfolio() {
                     ))}
                 </div>
                 <mark className="title-text">Personal Projects</mark> <br/> <br/>
+                <div className="portfolio-work">
+                    {PROJECTS.map(project => (
+                        <ExperienceCard
+                            title={project.title}
+                            subtitle={project.subtitle}
+                            description={project.description}
+                            image={project.image}
+                            isProject={project.isProject}
+                            github={project.github}
+                            website={project.website}
+                        />
+                    ))
+                    }
+                </div>
             </div>
         </div>
     )

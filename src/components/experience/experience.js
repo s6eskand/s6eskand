@@ -2,6 +2,10 @@ import fordLogo from '../../media/images/ford-logo.png';
 import watoLogo from '../../media/images/wato-logo.jpeg';
 import exponetLogo from '../../media/images/exponet-logo_enhanced.png';
 import makeLogo from '../../media/images/make-logo.png';
+import foolstackLogo from '../../media/images/foolstack-logo.png';
+import moodifyLogo from '../../media/images/moodify-logo.png';
+import coollistingsLogo from '../../media/images/coollistings-logo.png';
+import moodivityLogo from '../../media/images/moodivity-logo.png';
 
 export const WORK = [
     {
@@ -63,5 +67,66 @@ export const WORK = [
 ]
 
 export const PROJECTS = [
-
+    {
+        title: "Foolstack",
+        subtitle: "Grails, Java, React, Redux, MongoDB, Azure",
+        description: <p>
+            Interactive Software Architecture design and documentation application, allowing intuitive planning and organization
+            of Software based projects. <br/><br/>
+            Users can load projects from Github, or create them from scratch, adding visualized descriptions of architecture
+            Schemas, endpoints, sample requests and responses, and sample project code. If project loaded from Github,
+            repository issues, commit history, and PRs, also displayed. <br/><br/>
+            Grails server deployed through Azure Cloud Compute, data stored using MongoDB Atlas, and React UI with Redux
+            used for complex state management.
+        </p>,
+        image: foolstackLogo,
+        github: "https://github.com/s6eskand/Foolstack",
+        isProject: true
+    },
+    {
+        title: "Moodivity",
+        subtitle: "Django, React, Google Cloud, NLP, PostgreSQL",
+        description: <p>
+            Productivity application that enables users to set work/study goals for themselves and track their progress, all
+            the while keeping their mental health in check. <br/><br/>
+            After closing out a study/work session, users are prompted to record an audio log to capture their thoughts on
+            the work they completed. After recording, Google Cloud speech to text is used to convert audio to text, NLP sentiment
+            analysis is used to determine sentiment of user, and data is saved to PostgreSQL database. <br/><br/>
+            Users can track their progress, sentiment scores, and receive tips and encouragement to improve upon their goals. <br/><br/>
+            Winner at HackWestern 2020 for best use of Google Cloud API
+        </p>,
+        image: moodivityLogo,
+        github: "https://github.com/s6eskand/Moodivity",
+        website: "https://devpost.com/software/moodivity",
+        isProject: true
+    },
+    {
+        title: "Moodify",
+        subtitle: "Django, React, Google Cloud, NLP",
+        description: <p>
+            Web application that allows users to record audio logs to generate custom Spotify playlists based on the users
+            mood. <br/><br/>
+            Users stream audio from React client to Django server, Google Cloud speech to text API used to generate text,
+            from audio log, NLP sentiment analysis used to determine users sentiment, and Spotify API generates custom playlist. <br/><br/>
+            Winner at Winhacks 2020 for best use of Google Cloud API.
+        </p>,
+        image: moodifyLogo,
+        github: "https://github.com/s6eskand/Moodify",
+        website: "https://devpost.com/software/moodify-9roijv",
+        isProject: true,
+    },
+    {
+        title: "Coollistings - A Craigslist Clone",
+        subtitle: "Django, Python, BeautifulSoup",
+        description: <p>
+            Django application to display craigslist listings in a cleaner, and more intuitive UI. <br/><br/>
+            Users can query different listings, sending requests to backend that scrapes craigslist using BeautifulSoup4,
+            rendering results in UI written with Materialize CSS. <br/><br/>
+            Backend written in Django and Python, hosted on Heroku, and frontend developed using HTML, CSS, and Materialize CSS framework <br/><br/>
+        </p>,
+        image: coollistingsLogo,
+        github: "https://github.com/s6eskand/craigslist-clone",
+        website: "https://coollistings.herokuapp.com",
+        isProject: true
+    }
 ]
