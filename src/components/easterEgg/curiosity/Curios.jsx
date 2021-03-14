@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import './Curios.css';
 
 import Typical from "react-typical";
+import Coin from "../reward/Coin";
 
 const getOpeningMessage = () => {
     const visited = parseInt(localStorage.getItem("visited"));
@@ -37,9 +38,21 @@ function Curios() {
         />
     ]);
     const [step, setStep] = useState(0);
+    const [wins, setWins] = useState(0);
     const history = useHistory();
 
     useEffect(() => {
+        try {
+            const { wins } = JSON.parse(localStorage.getItem("game"));
+            setWins(wins)
+        } catch (e) {
+            const data = {
+                wins: 0,
+                codeSolution: "// add your solution here",
+                level: 1
+            }
+            localStorage.setItem("game", JSON.stringify(data))
+        }
         let visited = parseInt(localStorage.getItem("visited"));
         visited++;
         localStorage.setItem("visited", visited.toString());
@@ -48,6 +61,22 @@ function Curios() {
     const crashSite = () => {
         localStorage.setItem("crash", true);
         history.push('/')
+        window.location.reload();
+    }
+
+    const clearWins = () => {
+        try {
+            let data = JSON.parse(localStorage.getItem("game"));
+            data.wins = 0;
+            localStorage.setItem("game", JSON.stringify(data));
+        } catch (e) {
+            const data = {
+                wins: 0,
+                codeSolution: "// add your solution here",
+                level: 1
+            }
+            localStorage.setItem("game", JSON.stringify(data))
+        }
         window.location.reload();
     }
 
@@ -68,18 +97,26 @@ function Curios() {
     return(
         <div className="curios">
             <div className="container">
-                {
+                {wins > 0 ?
+                    <>
+                        <p style={{paddingBottom: 10}}>You have beat the game {wins === 1 ? "1 time!" : `${wins} times!`}. Click the coin to collect another!</p>
+                        <Coin handleCollect={crashSite} />
+                        <button onClick={clearWins} className="curios-btn">Clear wins?</button>
+                    </>
+                    :
                     display.map(element => (
-                        <>{element}</>
+                        <>
+                            {element}
+                            {
+                                step === 3 ?
+                                    <div>
+                                        <p>You better not...</p>
+                                        <button onClick={crashSite} className="warning-btn">CRASH</button>
+                                    </div> :
+                                    <button onClick={onNext} className="curios-btn">Continue...</button>
+                            }
+                        </>
                     ))
-                }
-                {
-                    step === 3 ?
-                        <div>
-                            <p>You better not...</p>
-                            <button onClick={crashSite} className="warning-btn">CRASH</button>
-                        </div> :
-                        <button onClick={onNext} className="curios-btn">Continue...</button>
                 }
             </div>
         </div>
