@@ -104,19 +104,21 @@ function Curios() {
                         <button onClick={clearWins} className="curios-btn">Clear wins?</button>
                     </>
                     :
-                    display.map(element => (
+                    <>
+                    {display.map(element => (
                         <>
                             {element}
-                            {
-                                step === 3 ?
-                                    <div>
-                                        <p>You better not...</p>
-                                        <button onClick={crashSite} className="warning-btn">CRASH</button>
-                                    </div> :
-                                    <button onClick={onNext} className="curios-btn">Continue...</button>
-                            }
                         </>
-                    ))
+                    ))}
+                    {
+                        step === 3 ?
+                            <div>
+                                <p>You better not...</p>
+                                <button onClick={crashSite} className="warning-btn">CRASH</button>
+                            </div> :
+                            <button onClick={onNext} className="curios-btn">Continue...</button>
+                    }
+                    </>
                 }
             </div>
         </div>
