@@ -46,7 +46,9 @@ function Home() {
                 </div>
             </div>
         </div>
-        <Footer />
+        <div style={{position: 'fixed', bottom: '0', width: '100%'}}>
+            <Footer />
+        </div>
         </>
     )
 
