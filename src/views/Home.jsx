@@ -7,8 +7,10 @@ import './Home.css'
 // media
 import header from '../media/images/header-resize.gif';
 import Footer from "../components/footer/Footer";
+import { useWindowDimensions } from "../components/hooks/WindoDimensionsHook";
 
 function Home() {
+    const { height } = useWindowDimensions();
 
     const steps = [
         'Software Developer',
@@ -46,7 +48,7 @@ function Home() {
                 </div>
             </div>
         </div>
-        <div style={{position: 'fixed', bottom: '0', width: '100%'}}>
+        <div style={ height < 800 ? {position: 'fixed', bottom: '0', width: '100%'} : null }>
             <Footer />
         </div>
         </>

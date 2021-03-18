@@ -7,8 +7,10 @@ import './About.css';
 import profile from '../media/images/rsz_sam_smile_sunglasses.jpg';
 
 import Footer from "../components/footer/Footer";
+import {useWindowDimensions} from "../components/hooks/WindoDimensionsHook";
 
 function About() {
+    const { height } = useWindowDimensions();
 
     return(
         <>
@@ -34,7 +36,7 @@ function About() {
                 </div>
             </div>
         </div>
-        <div style={{position: 'fixed', bottom: '0', width: '100%'}}>
+        <div style={ height < 800 ? {position: 'fixed', bottom: '0', width: '100%'} : null }>
             <Footer />
         </div>
         </>
