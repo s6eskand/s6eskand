@@ -12,48 +12,6 @@
   * Intramural Soccer Champ 2020 😤
   * Writing code is my therapy 👨‍💻
   * I will fight you if you diss JoJo's Bizarre Adventures
-  
-### Technologies I'm good at 💻:
-  * **Languages:**
-    * JavaScript/TypeScript
-    * Java
-    * Python
-    * Groovy
-    * Dart
-    * Ruby
-    * C/C++
-  * **Frameworks:**
-    * React
-    * Redux
-    * Django
-    * Grails
-    * Spring Boot
-    * Rails
-    * Flutter
-    * Express + Node
-  * **Databases/Cloud:**
-    * MongoDB
-    * Azure
-    * PostgreSQL
-    * MySQL
-    * SQLite3
-
-### Some things I'm doing/have done!:
-  * **Microsoft Student Partner**
-    * Part of the Microsoft Learn Student Ambassador's program
-    * Community of students and Microsoft professionals helping others and themselves discover the power of technology through practice
-  * **Hack the 6ix 2020**
-    * Mentor at Hack the 6ix
-    * Hosted workshop _Building a REST API with Django_
-  * **Learn with me - My technical blog**
-    * Technical blog aiming to help others learn the technologies I know through projects
-    * Weekly (atleast supposed to be) blog posts [here!](https://samtechblog.com)
-  * **Winhacks 2020**
-    * My first ever digital hackathon!
-    * Winner of Best use of Google Cloud API
-  * **Innovation Tank**
-    * Worked on relief effort during COVID-19
-    * Built website/worked on project to 3D-print PPE's for frontline workers
     
 ### Some music recommendations 🎧:
   1. **[The Entire _Sinatra at the Sands_ Album](https://open.spotify.com/album/2m0W0n7zBYmRNs1QAgoa6Z?si=7t1-4AsdQVue1D9LKthAgg)**
@@ -74,31 +32,6 @@
      * Because a softer song is essential
      * Great for some quiet time, or a late night drive alone
      * One of my favourite Artists 
-  
-### Some Anime Recommendations 📺:
-  ***DISCLAIMER*** Sorry if you don't like anime, but this is essential. (P.S. You have to watch subbed or else you'll make me sad 😢)
-  1. **JoJo's Bizarre Adventures**
-     * This is my favourite anime
-     * Not the best one to watch if you're just getting into anime (still a great anime nevertheless!)
-     * Has some great pop culture references
-     * 🌟🤩✨ _Is Fabulous_ ✨🤩🌟
-  2. **Attack on Titan**
-     * GREAT anime to watch if you're just getting into anime
-     * Action!!! Some really cool fighting scenes as well as great animation
-     * Great overarching story line that keeps you hooked
-  3. **Hunter x Hunter**
-     * Wow such a cute anime about a little boy and his fath- oh. oh wait. I am now emotionally scarred
-     * Chimera ant arc is NOT stretched out too long I do not care
-     * Fun, intense, and incredible shonen anime that I highly recommend
-   4. **Death Note**
-      * This one's a classic
-      * Great story line, an anime that makes you question what we see as right and wrong
-      * Apples are cool I guess (reference to the show)
-  5. **Avatar: The Last Airbender, Avatar: The Legend of Korra**
-     * Since the original is not Japanese, watch the original version, not the Japanese one
-     * Technically a cartoon, but still on the list
-     * AMAZING SHOW, an absolute classic that I've watched over 4 times now
-     * Watch The Last Airbender, then Legend of Korra so you're not confused
  
 If you're still reading, here are some pictures of myself that I like (Doesn't show in profile preview, go to the repo to see them!).
 
