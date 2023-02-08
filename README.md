@@ -1,6 +1,4 @@
-# Sam Eskandar - I like code or something I guess
-
-## Hey There!!! 🤠 Welcome to my Github profile! 🥳
+# Sam Eskandar - Professional Code Breaker 🤠
 
 ### Quick facts about me 📠:
   * Engineering student at the University of Waterloo, learning all things Mechatronics
